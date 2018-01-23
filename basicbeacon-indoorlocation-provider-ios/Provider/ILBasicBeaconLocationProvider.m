@@ -146,7 +146,7 @@
     
     ILLatLngFloor* latLngFloor = locationByUniqId[maxRssiUniqId];
     if (latLngFloor) {
-        ILIndoorLocation* indoorLocation = [[ILIndoorLocation alloc] initWithLatitude:latLngFloor.latitude.doubleValue longitude:latLngFloor.longitude.doubleValue floor:latLngFloor.floor];
+        ILIndoorLocation* indoorLocation = [[ILIndoorLocation alloc] initWithProvider:self latitude:latLngFloor.latitude.doubleValue longitude:latLngFloor.longitude.doubleValue floor:latLngFloor.floor];
         [self dispatchDidUpdateLocation:indoorLocation];
     }
     

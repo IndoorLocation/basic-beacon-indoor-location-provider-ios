@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BasicBeaconIndoorLocationProvider"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.license      = { :type => 'MIT' }
   s.summary      = "Allows to use beacon from Mapwize studio to locate you"
   s.homepage     = "https://github.com/IndoorLocation/basic-beacon-indoor-location-provider-ios.git"

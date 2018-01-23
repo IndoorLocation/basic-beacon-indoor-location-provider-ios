@@ -44,12 +44,9 @@
 #pragma mark CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation* location = [locations lastObject];
-    ILIndoorLocation* indoorLocation = [[ILIndoorLocation alloc] init];
-    indoorLocation.latitude = location.coordinate.latitude;
-    indoorLocation.longitude = location.coordinate.longitude;
+    ILIndoorLocation* indoorLocation = [[ILIndoorLocation alloc] initWithProvider:self latitude:location.coordinate.latitude longitude:location.coordinate.longitude floor:nil];
     indoorLocation.accuracy = location.horizontalAccuracy;
     indoorLocation.timestamp = location.timestamp;
-    indoorLocation.providerName = [self getName];
     [self dispatchDidUpdateLocation:indoorLocation];
 }
 

@@ -14,9 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - GPSIndoorLocationProvider (1.0.1):
+  - GPSIndoorLocationProvider (1.0.2):
     - IndoorLocation (~> 1.0)
-  - IndoorLocation (1.0.2)
+  - IndoorLocation (1.0.3)
   - Mapbox-iOS-SDK (3.7.3)
   - MapwizeForMapbox (1.0.2):
     - AFNetworking
@@ -30,8 +30,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  GPSIndoorLocationProvider: f27c354670f2371c60a3e57df36edb8567bd2cf3
-  IndoorLocation: 5bddf78ac26392e1efebdcfbf1504ca6dd831793
+  GPSIndoorLocationProvider: cfec9cdef6a743822e5f8bacdf19ef60360a5c83
+  IndoorLocation: 077b1453d425e2d91b29f497b116d09defeb9b15
   Mapbox-iOS-SDK: 5304bd9605babe6da9050ea4cb23c1671420b737
   MapwizeForMapbox: 4d426c8eece5305a25a67c951a3645ef6bddb68c
 
