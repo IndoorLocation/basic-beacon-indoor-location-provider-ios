@@ -1,0 +1,6 @@
+framework module GPSIndoorLocationProvider {
+  umbrella header "GPSIndoorLocationProvider-umbrella.h"
+
+  export *
+  module * { export * }
+}
