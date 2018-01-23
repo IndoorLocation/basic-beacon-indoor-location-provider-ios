@@ -1,6 +1,5 @@
-#import <IndoorLocation/IndoorLocation.h>
 #import <CoreLocation/CoreLocation.h>
-#import "ILGPSIndoorLocationProvider.h"
+#import <GPSIndoorLocationProvider/ILGPSIndoorLocationProvider.h>
 
 @interface ILBasicBeaconLocationProvider : ILIndoorLocationProvider <CLLocationManagerDelegate, ILIndoorLocationProviderDelegate>
     
