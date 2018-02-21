@@ -1,6 +1,6 @@
-#import <IndoorLocation/IndoorLocation.h>
+#import <Foundation/Foundation.h>
 
-@interface ILLatLngFloor : ILIndoorLocationProvider
+@interface ILLatLngFloor : NSObject
 
 @property (nonatomic, strong) NSNumber* latitude;
 @property (nonatomic, strong) NSNumber* longitude;
