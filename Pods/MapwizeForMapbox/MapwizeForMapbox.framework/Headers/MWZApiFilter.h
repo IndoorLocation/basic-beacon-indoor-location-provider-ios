@@ -2,16 +2,16 @@
 
 @interface MWZApiFilter : NSObject
 
-@property (nonatomic, retain) NSString* venueId;
-@property (nonatomic, retain) NSString* universeId;
-@property (nonatomic, retain) NSNumber* isVisible;
-@property (nonatomic, retain) NSString* organizationId;
-@property (nonatomic, retain) NSString* alias;
-@property (nonatomic, retain) NSString* name;
-@property (nonatomic, retain) NSNumber* latitudeMin;
-@property (nonatomic, retain) NSNumber* latitudeMax;
-@property (nonatomic, retain) NSNumber* longitudeMin;
-@property (nonatomic, retain) NSNumber* longitudeMax;
+@property (nonatomic) NSString* venueId;
+@property (nonatomic) NSString* universeId;
+@property (nonatomic) NSNumber* isVisible;
+@property (nonatomic) NSString* organizationId;
+@property (nonatomic) NSString* alias;
+@property (nonatomic) NSString* name;
+@property (nonatomic) NSNumber* latitudeMin;
+@property (nonatomic) NSNumber* latitudeMax;
+@property (nonatomic) NSNumber* longitudeMin;
+@property (nonatomic) NSNumber* longitudeMax;
 
 - (NSMutableDictionary*) toDictionary;
 

@@ -1,10 +1,11 @@
 #import <UIKit/UIKit.h>
 #import "MWZFollowUserModeEnum.h"
-#import "MWZFollowUserModeDelegate.h"
+
+@protocol MWZFollowUserModeDelegate;
 
 @interface MWZFollowUserButton : UIButton
 
-@property (nonatomic, strong) id<MWZFollowUserModeDelegate> delegate;
+@property (nonatomic, weak) id<MWZFollowUserModeDelegate> delegate;
 
 - (void) setMode:(FollowUserMode) mode;
 

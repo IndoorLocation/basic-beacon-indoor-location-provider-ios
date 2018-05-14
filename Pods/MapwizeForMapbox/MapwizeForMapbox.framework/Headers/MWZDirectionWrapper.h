@@ -2,12 +2,12 @@
 
 @interface MWZDirectionWrapper : NSObject
 
-@property(nonatomic, strong) NSNumber* latitude;
-@property(nonatomic, strong) NSNumber* longitude;
-@property(nonatomic, strong) NSNumber* floor;
-@property(nonatomic, strong) NSString* placeId;
-@property(nonatomic, strong) NSString* venueId;
-@property(nonatomic, strong) NSString* placeListId;
+@property(nonatomic) NSNumber* latitude;
+@property(nonatomic) NSNumber* longitude;
+@property(nonatomic) NSNumber* floor;
+@property(nonatomic) NSString* placeId;
+@property(nonatomic) NSString* venueId;
+@property(nonatomic) NSString* placeListId;
 
 - (instancetype) init;
 

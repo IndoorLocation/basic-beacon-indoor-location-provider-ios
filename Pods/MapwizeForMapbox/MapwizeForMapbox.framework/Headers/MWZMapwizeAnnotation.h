@@ -1,8 +1,11 @@
-#import <Mapbox/Mapbox.h>
+@import Mapbox;
+
+@protocol MWZMapwizeAnnotationDelegate;
 
 @interface MWZMapwizeAnnotation : MGLPointAnnotation
 
-@property (nonatomic, strong) NSNumber* floor;
-@property (nonatomic, strong) UIImage* image;
+@property (nonatomic) NSNumber* floor;
+@property (nonatomic) UIImage* image;
+@property (nonatomic, weak) id<MWZMapwizeAnnotationDelegate> delegate;
 
 @end

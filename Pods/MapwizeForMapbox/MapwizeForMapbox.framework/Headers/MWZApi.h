@@ -1,12 +1,22 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import "MWZApiResponseParser.h"
-#import "MWZIconImage.h"
-#import "MWZSearchParams.h"
-#import "MWZApiFilter.h"
-#import "MWZConnectorPlace.h"
-#import "MWZParsedUrlObject.h"
-#import "MWZStyleSheet.h"
+
+#import "MWZDirectionPoint.h"
+#import "MWZObject.h"
+
+@class MWZVenue;
+@class MWZPlace;
+@class MWZPlaceList;
+@class MWZConnectorPlace;
+@class MWZLayer;
+@class MWZApiFilter;
+@class MWZStyleSheet;
+@class MWZIconImage;
+@class MWZParsedUrlObject;
+@class MWZDirection;
+@class MWZSearchParams;
+@class MWZUniverse;
+@class MWZDistanceResponse;
 
 @interface MWZApi : NSObject
 
@@ -71,6 +81,7 @@
 + (NSURLSessionDataTask*)getDirectionWithFrom:(id<MWZDirectionPoint>) from to:(id<MWZDirectionPoint>) to waypoints:(NSArray<id<MWZDirectionPoint>>*) waypoints isAccessible:(BOOL) isAccessible success:(void (^)(MWZDirection* direction))success failure:(void (^)(NSError* error)) failure;
 + (NSURLSessionDataTask*)getDirectionWithFrom:(id<MWZDirectionPoint>) from tos:(NSArray<id<MWZDirectionPoint>>*) tos waypoints:(NSArray<id<MWZDirectionPoint>>*) waypoints isAccessible:(BOOL) isAccessible success:(void (^)(MWZDirection* direction))success failure:(void (^)(NSError* error)) failure;
 
++ (NSURLSessionDataTask*)getDistanceWithFrom:(id<MWZDirectionPoint>) from tos:(NSArray<id<MWZDirectionPoint>>*) tos isAccessible:(BOOL) isAccessible sortByTravelTime:(BOOL) sort success:(void (^)(MWZDistanceResponse* distance))success failure:(void (^)(NSError* error)) failure;
 /*
  Search requests
  */

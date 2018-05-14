@@ -2,8 +2,8 @@
 
 @interface MWZUniverse : NSObject
 
-@property(nonatomic, strong, readonly) NSString* identifier;
-@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, readonly) NSString* identifier;
+@property(nonatomic, readonly) NSString* name;
 
 - (instancetype)initWithIdentifier:(NSString*) identifier name:(NSString*) name;
 

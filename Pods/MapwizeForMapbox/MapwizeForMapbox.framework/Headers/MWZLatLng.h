@@ -3,7 +3,7 @@
 
 @interface MWZLatLng : NSObject
 
-@property(nonatomic, assign, readonly) CLLocationCoordinate2D coordinates;
+@property(nonatomic, readonly, assign) CLLocationCoordinate2D coordinates;
 
 - (instancetype) initWithLatitude:(double) latitude longitude:(double) longitude;
 

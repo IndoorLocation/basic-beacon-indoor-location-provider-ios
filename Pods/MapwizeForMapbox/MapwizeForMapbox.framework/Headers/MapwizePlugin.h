@@ -1,37 +1,46 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "MWZGeojsonDataFactory.h"
-#import "MWZMapwizePluginDelegate.h"
-#import "MWZFloorControllerDelegate.h"
-#import "MWZMapwizeAnnotation.h"
-#import "MWZDirection.h"
-#import "MWZLocationEngine.h"
-#import "MWZLocationLayer.h"
-#import "MWZConnectorAnnotationDelegate.h"
-#import "MWZFollowUserButton.h"
-#import "MWZPlaceList.h"
-#import "MWZOptions.h"
 #import <IndoorLocation/IndoorLocation.h>
+#import "MWZFollowUserModeEnum.h"
+
+@protocol MWZMapwizePluginDelegate;
+@protocol MWZVenueStateDelegate;
+
+@class MWZOptions;
+@class MWZFollowUserButton;
+@class MWZPlace;
+@class MWZPlaceList;
+@class MWZStyle;
+@class MWZDirection;
+@class MWZMapwizeAnnotation;
+@class MWZVenue;
+@class MWZUniverse;
+@class MWZLatLngFloor;
+@class MWZUISettings;
+@class MWZDirectionOptions;
+
 @import Mapbox;
 
-@interface MapwizePlugin : NSObject <MGLMapViewDelegate, UIGestureRecognizerDelegate, MWZFloorControllerDelegate, CLLocationManagerDelegate, MWZFollowUserModeDelegate, UIGestureRecognizerDelegate, MWZLocationEngineDelegate, MWZConnectorAnnotationDelegate>
+@interface MapwizePlugin : NSObject <MGLMapViewDelegate, UIGestureRecognizerDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) id<MGLMapViewDelegate> mapboxDelegate;
-@property (nonatomic, strong) id<MWZMapwizePluginDelegate> delegate;
-@property (nonatomic, strong) MWZFollowUserButton* followButton;
+@property (nonatomic, weak) id<MGLMapViewDelegate> mapboxDelegate;
+@property (nonatomic, weak) id<MWZMapwizePluginDelegate> delegate;
 
-@property (nonatomic, strong) UIView* bottomLayoutView;
-@property (nonatomic, strong) UIView* topLayoutView;
-@property (nonatomic, strong) UIImageView* compassView;
+@property (nonatomic) MWZFollowUserButton* followButton;
 
-@property (nonatomic, strong, readonly) ILIndoorLocation* userLocation;
-@property (nonatomic, strong, readonly) NSNumber* userHeading;
-@property (nonatomic, assign) FollowUserMode followUserMode;
+
+@property (nonatomic) UIView* bottomLayoutView;
+@property (nonatomic) UIView* topLayoutView;
+
+@property (nonatomic, readonly) ILIndoorLocation* userLocation;
+@property (nonatomic, readonly) NSNumber* userHeading;
 
 - (instancetype) initWith:(MGLMapView*) mglMapView options:(MWZOptions*) options;
+- (instancetype) initWith:(MGLMapView*) mglMapView options:(MWZOptions*) options uiSettings:(MWZUISettings*) settings;
 
 - (void) refreshWithCompletionHandler:(void (^)(void)) handler;
+- (void) grantAccess:(NSString*) accessKey success:(void (^)(void)) success failure:(void (^)(NSError* error)) failure;
 
 - (MWZVenue*) getVenue;
 
@@ -49,6 +58,7 @@
 - (void) setLanguage:(NSString*) language;
 - (void) setLanguage:(NSString*) language forVenue:(MWZVenue*) venue;
 - (NSString*) getLanguageForVenue:(MWZVenue*) venue;
+- (NSString*) getLanguage;
 
 
 - (void) setUniverse:(MWZUniverse*) universe;
@@ -62,12 +72,16 @@
 - (void) addPromotedPlaces:(NSArray<MWZPlace*>*) places;
 - (void) removePromotedPlace:(MWZPlace*) place;
 - (void) removePromotedPlaces:(NSArray<MWZPlace*>*) places;
-
+- (void) removePromotedPlacesForVenue:(MWZVenue*) venue;
+    
 - (void) setStyle:(MWZStyle*) style forPlace:(MWZPlace*) place;
 
+- (void) setDirection:(MWZDirection *)direction  options:(MWZDirectionOptions*) options;
 - (void) setDirection:(MWZDirection*) direction;
+- (MWZDirection*) getDirection;
 
-
+- (void) setFollowUserMode:(FollowUserMode)followUserMode;
+- (FollowUserMode) getFollowUserMode;
 
 - (void) setIndoorLocationProvider:(ILIndoorLocationProvider*) locationProvider;
 

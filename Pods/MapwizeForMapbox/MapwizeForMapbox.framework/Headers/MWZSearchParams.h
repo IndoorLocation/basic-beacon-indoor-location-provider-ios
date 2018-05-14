@@ -2,11 +2,11 @@
 
 @interface MWZSearchParams : NSObject
 
-@property (nonatomic, strong) NSString* query;
-@property (nonatomic, strong) NSString* venueId;
-@property (nonatomic, strong) NSString* organizationId;
-@property (nonatomic, strong) NSString* universeId;
-@property (nonatomic, strong) NSArray<NSString*>* objectClass;
+@property (nonatomic) NSString* query;
+@property (nonatomic) NSString* venueId;
+@property (nonatomic) NSString* organizationId;
+@property (nonatomic) NSString* universeId;
+@property (nonatomic) NSArray<NSString*>* objectClass;
 
 - (NSDictionary*) toDictionary;
 

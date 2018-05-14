@@ -4,18 +4,18 @@
 
 @interface MWZRoute : NSObject
 
-@property(nonatomic, strong, readonly) NSNumber* floor;
-@property(nonatomic, strong, readonly) NSNumber* fromFloor;
-@property(nonatomic, strong, readonly) NSNumber* toFloor;
-@property(nonatomic, assign, readonly) BOOL isStart;
-@property(nonatomic, assign, readonly) BOOL isEnd;
-@property(nonatomic, assign, readonly) double traveltime;
-@property(nonatomic, assign, readonly) double timeToEnd;
-@property(nonatomic, assign, readonly) MGLCoordinateBounds bounds;
-@property(nonatomic, assign, readonly) double distance;
-@property(nonatomic, strong, readonly) NSString* connectorTypeTo;
-@property(nonatomic, strong, readonly) NSString* connectorTypeFrom;
-@property(nonatomic, strong, readonly) NSArray<NSValue*>* path;
+@property(nonatomic, readonly) NSNumber* floor;
+@property(nonatomic, readonly) NSNumber* fromFloor;
+@property(nonatomic, readonly) NSNumber* toFloor;
+@property(nonatomic, readonly, assign) BOOL isStart;
+@property(nonatomic, readonly, assign) BOOL isEnd;
+@property(nonatomic, readonly, assign) double traveltime;
+@property(nonatomic, readonly, assign) double timeToEnd;
+@property(nonatomic, readonly, assign) MGLCoordinateBounds bounds;
+@property(nonatomic, readonly, assign) double distance;
+@property(nonatomic, readonly) NSString* connectorTypeTo;
+@property(nonatomic, readonly) NSString* connectorTypeFrom;
+@property(nonatomic, readonly) NSArray<NSValue*>* path;
 
 - (instancetype) initWithFloor:(NSNumber*) floor fromFloor:(NSNumber*) fromFloor toFloor:(NSNumber*) toFloor isStart:(BOOL) isStart isEnd:(BOOL) isEnd
                     traveltime:(double) traveltime timeToEnd:(double) timeToEnd bounds:(struct MGLCoordinateBounds) bounds distance:(double) distance

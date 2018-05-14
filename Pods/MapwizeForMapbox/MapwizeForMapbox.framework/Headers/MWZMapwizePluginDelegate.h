@@ -5,6 +5,7 @@
 #import "MWZVenue.h"
 #import "MWZFollowUserModeEnum.h"
 @class MapwizePlugin;
+@class MWZPlace;
 
 @protocol MWZMapwizePluginDelegate <NSObject>
 

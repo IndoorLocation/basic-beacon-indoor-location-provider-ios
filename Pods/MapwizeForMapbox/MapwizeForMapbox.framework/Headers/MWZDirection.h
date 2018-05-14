@@ -6,14 +6,14 @@
 
 @interface MWZDirection : NSObject
 
-@property(nonatomic, strong, readonly) MWZDirectionWrapper* from;
-@property(nonatomic, strong, readonly) MWZDirectionWrapper* to;
-@property(nonatomic, assign, readonly) double distance;
-@property(nonatomic, strong, readonly) NSArray<MWZRoute*>* routes;
-@property(nonatomic, assign, readonly) double traveltime;
-@property(nonatomic, assign, readonly) MGLCoordinateBounds bounds;
-@property(nonatomic, strong, readonly) NSArray<MWZDirectionWrapper*>* waypoints;
-@property(nonatomic, strong, readonly) NSArray<MWZDirection*>* subdirections;
+@property(nonatomic, readonly) MWZDirectionWrapper* from;
+@property(nonatomic, readonly) MWZDirectionWrapper* to;
+@property(nonatomic, readonly, assign) double distance;
+@property(nonatomic, readonly) NSArray<MWZRoute*>* routes;
+@property(nonatomic, readonly, assign) double traveltime;
+@property(nonatomic, readonly, assign) MGLCoordinateBounds bounds;
+@property(nonatomic, readonly) NSArray<MWZDirectionWrapper*>* waypoints;
+@property(nonatomic, readonly) NSArray<MWZDirection*>* subdirections;
 
 - (instancetype) initWithFrom:(MWZDirectionWrapper*) from to:(MWZDirectionWrapper*) to distance:(double) distance routes:(NSArray<MWZRoute*>*) routes
                    traveltime:(double) traveltime bounds:(MGLCoordinateBounds) bounds waypoints:(NSArray<MWZDirectionWrapper*>*) waypoints subdirections:(NSArray<MWZDirection*>*) subdirections;

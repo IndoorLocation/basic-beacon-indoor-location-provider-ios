@@ -2,9 +2,9 @@
 
 @interface MWZOptions : NSObject
 
-@property (nonatomic, retain) NSNumber* floor;
-@property (nonatomic, retain) NSString* language;
-@property (nonatomic, assign) BOOL showUserPositionControl;
-@property (nonatomic, assign) BOOL showFloorControl;
+@property (nonatomic) NSNumber* floor;
+@property (nonatomic) NSString* language;
+@property (nonatomic) NSString* venueId;
+@property (nonatomic) NSString* organizationId;
 
 @end
