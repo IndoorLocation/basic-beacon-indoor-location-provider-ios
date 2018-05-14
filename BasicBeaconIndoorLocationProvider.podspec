@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BasicBeaconIndoorLocationProvider"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.license      = { :type => 'MIT' }
   s.summary      = "Allows to use beacon from Mapwize studio to locate you"
   s.homepage     = "https://github.com/IndoorLocation/basic-beacon-indoor-location-provider-ios.git"
@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       = { :git => "https://github.com/IndoorLocation/basic-beacon-indoor-location-provider-ios.git", :tag => "#{s.version}" }
   s.source_files  = "basicbeacon-indoorlocation-provider-ios/Provider/*.{h,m}"
-  s.dependency "GPSIndoorLocationProvider", "~> 1.0"
+  s.dependency "GPSIndoorLocationProvider", "~> 1.0.3"
 end
