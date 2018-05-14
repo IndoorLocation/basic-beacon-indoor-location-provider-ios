@@ -6,7 +6,7 @@
 @implementation ILBasicBeaconLocationProvider {
     NSString* mapwizeApiKey;
     CLLocationManager* locationManager;
-    ILGPSIndoorLocationProvider* gpsLocationProvider;
+    ILIndoorLocationProvider* mLocationProvider;
     ILIndoorLocation* lastGpsLocation;
     BOOL started;
     NSMutableDictionary<NSString*,ILLatLngFloor*>* locationByUniqId;
@@ -14,14 +14,14 @@
     NSTimer* computeNearestBeaconTimer;
 }
     
-- (instancetype)initWithMapwizeApiKey:(NSString*) apiKey gpsIndoorLocationProvider:(ILGPSIndoorLocationProvider*) gpsIndoorLocationProvider {
+- (instancetype)initWithMapwizeApiKey:(NSString*) apiKey indoorLocationProvider:(ILIndoorLocationProvider*) locationProvider {
     self = [super init];
     if (self) {
         mapwizeApiKey = apiKey;
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
-        gpsLocationProvider = gpsIndoorLocationProvider;
-        [gpsLocationProvider addDelegate:self];
+        mLocationProvider = locationProvider;
+        [mLocationProvider addDelegate:self];
         started = NO;
         locationByUniqId = [[NSMutableDictionary alloc] init];
         rssiMeanByUniqId = [[NSMutableDictionary alloc] init];
@@ -33,7 +33,7 @@
     
     if (!started) {
         [locationManager requestWhenInUseAuthorization];
-        [gpsLocationProvider start];
+        [mLocationProvider start];
         started = YES;
         computeNearestBeaconTimer = [NSTimer scheduledTimerWithTimeInterval:5.0
                                          target:self
@@ -48,7 +48,7 @@
 - (void) stop {
     
     if (started) {
-        [gpsLocationProvider stop];
+        [mLocationProvider stop];
         started = NO;
         [computeNearestBeaconTimer invalidate];
         [self dispatchDidStop];
