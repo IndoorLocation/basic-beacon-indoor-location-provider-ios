@@ -32,7 +32,7 @@
 - (void) mapwizePluginDidLoad:(MapwizePlugin *)mapwizePlugin {
     
     gpsProvider = [[ILGPSIndoorLocationProvider alloc] init];
-    basicBeaconProvider = [[ILBasicBeaconLocationProvider alloc] initWithMapwizeApiKey:@"1f04d780dc30b774c0c10f53e3c7d4ea" indoorLocationProvider:gpsProvider];
+    basicBeaconProvider = [[ILBasicBeaconLocationProvider alloc] initWithMapwizeApiKey:@"<NAVISENS KEY>" indoorLocationProvider:gpsProvider];
     [mapwizePlugin setIndoorLocationProvider:basicBeaconProvider];
     
 }

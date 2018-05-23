@@ -7,7 +7,7 @@
 	<key>MWZMapwizeApiKey</key>
 	<string>1f04d780dc30b774c0c10f53e3c7d4ea</string>
 	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoibWFwd2l6ZSIsImEiOiJjamNhYnN6MjAwNW5pMnZvMnYzYTFpcWVxIn0.veTCqUipGXCw8NwM2ep1Xg</string>
+	<string>pk.mapwize</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your authorization to display your location on the map.</string>
 	<key>CFBundleDevelopmentRegion</key>

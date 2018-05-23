@@ -17,11 +17,11 @@ PODS:
   - GPSIndoorLocationProvider (1.0.3):
     - IndoorLocation (= 1.0.4)
   - IndoorLocation (1.0.4)
-  - Mapbox-iOS-SDK (4.0.0)
-  - MapwizeForMapbox (1.3.0):
-    - AFNetworking (~> 3.0)
-    - IndoorLocation (~> 1.0)
-    - Mapbox-iOS-SDK (~> 4.0)
+  - Mapbox-iOS-SDK (4.0.1)
+  - MapwizeForMapbox (1.3.3):
+    - AFNetworking (= 3.2.1)
+    - IndoorLocation (= 1.0.4)
+    - Mapbox-iOS-SDK (= 4.0.1)
 
 DEPENDENCIES:
   - GPSIndoorLocationProvider
@@ -29,7 +29,7 @@ DEPENDENCIES:
   - MapwizeForMapbox
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - GPSIndoorLocationProvider
     - IndoorLocation
@@ -40,9 +40,9 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   GPSIndoorLocationProvider: 0b9ed918465865fae7824db5e2dca27d0088bd82
   IndoorLocation: 9812c8c2d499ef25e6146ef90cf23f8d107213a8
-  Mapbox-iOS-SDK: 271754e96eb4434ba1b0a8c68432e1ea26fe9841
-  MapwizeForMapbox: 59b743aebc7401a8e1f6a6bde98df6b47528fbdc
+  Mapbox-iOS-SDK: 09b978be732d753e5c5e2911460fc0a018ce9be6
+  MapwizeForMapbox: 182df95d0208d306c3987589f834d4aa66ac33f5
 
 PODFILE CHECKSUM: 95c0b59c1e7bbf918cb813b75be06c068a36f3e6
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2
