@@ -4,8 +4,8 @@
 target 'basicbeacon-indoorlocation-provider-ios' do
   use_frameworks!
 
-  pod 'IndoorLocation'
-  pod 'MapwizeForMapbox'
-  pod 'GPSIndoorLocationProvider'
+  pod 'IndoorLocation', '1.0.4'
+  pod 'MapwizeForMapbox', '1.4.2'
+  pod 'GPSIndoorLocationProvider', '1.0.3'
 
 end
