@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
 #import <Mapbox/Mapbox.h>
-#import <MapwizeForMapbox/MapwizeForMapbox.h>
+#import "ILBasicBeaconLocationProvider.h"
+#import "ILGPSIndoorLocationProvider.h"
 
-@interface ViewController : UIViewController <MWZMapwizePluginDelegate>
+@import MapwizeUI;
 
-@property (weak, nonatomic) IBOutlet MGLMapView *mglMapView;
+@interface ViewController : UIViewController
     
 @end
-

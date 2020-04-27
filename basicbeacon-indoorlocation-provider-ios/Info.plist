@@ -4,8 +4,8 @@
 <dict>
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
-	<key>MWZMapwizeApiKey</key>
-	<string>1f04d780dc30b774c0c10f53e3c7d4ea</string>
+	<key>MWZApiKey</key>
+	<string>YOUR_MAPWIZE_API_KEY</string>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.mapwize</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
